@@ -272,7 +272,25 @@ static void build_playlist(int argc, char **argv, int first)
         }
         free(s);
     }
-    if (nplay == 0) add_path(SAMPLES_DIR, 0);
+    if (nplay == 0) {
+        /* bundled samples: build-time path, else next to the binary (release tarballs) */
+        char exe[PATH_MAX], cand[PATH_MAX + 64];
+        struct stat st;
+        if (stat(SAMPLES_DIR, &st) == 0) {
+            add_path(SAMPLES_DIR, 0);
+        } else {
+            ssize_t len = readlink("/proc/self/exe", exe, sizeof exe - 1);
+            if (len > 0) {
+                exe[len] = 0;
+                *strrchr(exe, '/') = 0;
+                const char *rel[] = { "samples", "../share/wallengine/samples" };
+                for (int k = 0; k < 2 && nplay == 0; k++) {
+                    snprintf(cand, sizeof cand, "%s/%s", exe, rel[k]);
+                    if (stat(cand, &st) == 0) add_path(cand, 0);
+                }
+            }
+        }
+    }
     if (cfg.shuffle) {
         srand(time(NULL) ^ getpid());
         for (int i = nplay - 1; i > 0; i--) {
