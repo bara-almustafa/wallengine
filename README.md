@@ -14,6 +14,7 @@
   <img src="https://img.shields.io/badge/platform-Linux%20%7C%20X11-orange" alt="Linux X11">
   <img src="https://img.shields.io/badge/OpenGL-3.3-green" alt="OpenGL 3.3">
   <img src="https://img.shields.io/badge/license-GPLv3-lightgrey" alt="GPLv3">
+  <a href="https://buymeacoffee.com/0xcybersoldier"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
 </p>
 
 | | |
@@ -148,6 +149,18 @@ tint       = 1.0 0.95 0.9
 - **i3 / bspwm / openbox**: `--mode desktop` or `--mode root`.
 - Mouse interaction (parallax, cursor events in scripts) works through pointer polling, so
   the wallpaper never steals clicks.
+
+## Sponsor the project
+
+If wallengine is useful to you, you can sponsor its development:
+
+<p align="center">
+  <a href="https://buymeacoffee.com/0xcybersoldier" target="_blank">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee">
+  </a>
+</p>
+
+☕ **[buymeacoffee.com/0xcybersoldier](https://buymeacoffee.com/0xcybersoldier)**
 
 ## Credits
 
