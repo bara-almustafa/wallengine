@@ -1,0 +1,9 @@
+# A scene = an image or video plus effects.
+source     = assets/mountains.png
+fit        = cover
+parallax   = 0.03     # mouse parallax depth
+effect     = snow     # none | snow | rain | fireflies | bokeh
+visualizer = none     # none | bars | wave | circle
+tint       = 0.95 0.97 1.05
+brightness = 1.0
+saturation = 1.0

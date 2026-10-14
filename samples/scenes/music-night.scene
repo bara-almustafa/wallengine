@@ -1,0 +1,5 @@
+source     = assets/mountains.png
+parallax   = 0.02
+effect     = fireflies
+visualizer = bars
+brightness = 0.85

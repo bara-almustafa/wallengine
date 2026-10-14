@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=wallengine
+Comment=Live wallpaper engine
+Icon=wallengine
+Exec=sh -c "sleep 3; exec $HOME/.local/bin/wallengine"
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
